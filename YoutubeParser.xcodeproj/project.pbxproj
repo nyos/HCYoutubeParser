@@ -21,6 +21,7 @@
 		3285C492157CEFFB00096202 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3285C491157CEFFB00096202 /* AppDelegate.m */; };
 		3285C49B157CF02700096202 /* HCYoutubeParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 3285C49A157CF02700096202 /* HCYoutubeParser.m */; };
 		3285C49D157D07AD00096202 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3285C49C157D07AD00096202 /* MediaPlayer.framework */; };
+		6089F51D24B4590000228706 /* NSString+jsonParse.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6089F51C24B4590000228706 /* NSString+jsonParse.mm */; };
 		F449DE29160E5651001BADA4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F449DE27160E5651001BADA4 /* ViewController.m */; };
 		F449DE2A160E5651001BADA4 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F449DE28160E5651001BADA4 /* ViewController.xib */; };
 		F449DE2F160E68F9001BADA4 /* button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F449DE2C160E68F9001BADA4 /* button@2x.png */; };
@@ -60,6 +61,8 @@
 		3285C499157CF02700096202 /* HCYoutubeParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCYoutubeParser.h; sourceTree = "<group>"; };
 		3285C49A157CF02700096202 /* HCYoutubeParser.m */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.c.objc; path = HCYoutubeParser.m; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; };
 		3285C49C157D07AD00096202 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		6089F51B24B4590000228706 /* NSString+jsonParse.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+jsonParse.h"; sourceTree = "<group>"; };
+		6089F51C24B4590000228706 /* NSString+jsonParse.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = "NSString+jsonParse.mm"; sourceTree = "<group>"; };
 		F449DE26160E5651001BADA4 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		F449DE27160E5651001BADA4 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		F449DE28160E5651001BADA4 /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
@@ -185,6 +188,8 @@
 			children = (
 				3285C499157CF02700096202 /* HCYoutubeParser.h */,
 				3285C49A157CF02700096202 /* HCYoutubeParser.m */,
+				6089F51B24B4590000228706 /* NSString+jsonParse.h */,
+				6089F51C24B4590000228706 /* NSString+jsonParse.mm */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -259,7 +264,7 @@
 		3285C474157CEFFA00096202 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0500;
+				LastUpgradeCheck = 1150;
 				ORGANIZATIONNAME = Hiddencode.me;
 				TargetAttributes = {
 					326A0AAD1BEA0CCE002D323A = {
@@ -269,7 +274,7 @@
 			};
 			buildConfigurationList = 3285C477157CEFFA00096202 /* Build configuration list for PBXProject "YoutubeParser" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
@@ -334,6 +339,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6089F51D24B4590000228706 /* NSString+jsonParse.mm in Sources */,
 				3285C48E157CEFFB00096202 /* main.m in Sources */,
 				3285C492157CEFFB00096202 /* AppDelegate.m in Sources */,
 				3285C49B157CF02700096202 /* HCYoutubeParser.m in Sources */,
@@ -426,16 +432,31 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -449,7 +470,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -460,15 +481,29 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
@@ -476,7 +511,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -490,8 +525,10 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "YoutubeParser/YoutubeParser-Prefix.pch";
+				HEADER_SEARCH_PATHS = picojson;
 				INFOPLIST_FILE = "YoutubeParser/YoutubeParser-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.hiddencode.yt-parser";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
@@ -504,8 +541,10 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "YoutubeParser/YoutubeParser-Prefix.pch";
+				HEADER_SEARCH_PATHS = picojson;
 				INFOPLIST_FILE = "YoutubeParser/YoutubeParser-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.hiddencode.yt-parser";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
@@ -522,6 +561,7 @@
 				326A0AC01BEA0CCE002D323A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3285C477157CEFFA00096202 /* Build configuration list for PBXProject "YoutubeParser" */ = {
 			isa = XCConfigurationList;

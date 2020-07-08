@@ -147,12 +147,12 @@ typedef void(^DrawRectBlock)(CGRect rect);
     [HCYoutubeParser thumbnailForYoutubeURL:url thumbnailSize:YouTubeThumbnailDefaultHighQuality completeBlock:^(UIImage *image, NSError *error) {
         
         if (!error) {
-            [_playButton setBackgroundImage:image forState:UIControlStateNormal];
+            [self->_playButton setBackgroundImage:image forState:UIControlStateNormal];
             
             [HCYoutubeParser h264videosWithYoutubeURL:url completeBlock:^(NSDictionary *videoDictionary, NSError *error) {
                 
-                _playButton.hidden = NO;
-                _activityIndicator.hidden = YES;
+                self->_playButton.hidden = NO;
+                self->_activityIndicator.hidden = YES;
                 
                 NSDictionary *qualities = videoDictionary;
                 
@@ -167,9 +167,9 @@ typedef void(^DrawRectBlock)(CGRect rect);
                     [[[UIAlertView alloc] initWithTitle:@"Error" message:@"Couldn't find youtube video" delegate:nil cancelButtonTitle:@"Close" otherButtonTitles: nil] show];
                     return;
                 }
-                _urlToLoad = [NSURL URLWithString:URLString];
+                self->_urlToLoad = [NSURL URLWithString:URLString];
                 
-                [_playButton setImage:[UIImage imageNamed:@"play_button"] forState:UIControlStateNormal];
+                [self->_playButton setImage:[UIImage imageNamed:@"play_button"] forState:UIControlStateNormal];
             }];
         }
         else {
@@ -185,15 +185,6 @@ typedef void(^DrawRectBlock)(CGRect rect);
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-}
-
-- (void)viewDidUnload {
-    [self setSubmitButton:nil];
-    [self setUrlTextField:nil];
-    [self setActivityIndicator:nil];
-    [self setPlayButton:nil];
-    
-    [super viewDidUnload];
 }
 
 #pragma mark - UITextFieldDelegate Implementation
